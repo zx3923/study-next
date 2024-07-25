@@ -1,0 +1,10 @@
+.nav {
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+}

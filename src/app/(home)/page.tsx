@@ -1,3 +1,4 @@
+import Item from "../components/item";
 import styles from "../styles/home.module.css";
 
 const API_KEY = process.env.API_KEY;
@@ -10,12 +11,19 @@ async function getBestSellers() {
 
 export default async function Home() {
   const sellers = await getBestSellers();
-  console.log(sellers);
+  console.log(sellers.results);
   return (
-    <div>
-      {sellers.results.map((item: any) => (
-        <div key={item.list_name}>{item.list_name}</div>
-      ))}
-    </div>
+    <>
+      <h1 className={styles.h1}>The New York Times Best Seller Explorer</h1>
+      <div className={styles.container}>
+        {sellers.results.map((item: any) => (
+          <Item
+            key={item.list_name}
+            title={item.list_name}
+            listName={item.list_name_encoded}
+          />
+        ))}
+      </div>
+    </>
   );
 }

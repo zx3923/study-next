@@ -1,0 +1,10 @@
+import styles from "../styles/item.module.css";
+
+interface ISellerProps {
+  title: string;
+  listName: string;
+}
+
+export default function Item({ title, listName }: ISellerProps) {
+  return <div className={styles.div}>{title}</div>;
+}

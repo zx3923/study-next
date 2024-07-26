@@ -4,7 +4,7 @@ import styles from "../styles/home.module.css";
 const API_KEY = process.env.API_KEY;
 
 async function getBestSellers() {
-  const response = await fetch(`${API_KEY}`);
+  const response = await fetch(`${API_KEY}s`);
   const json = await response.json();
   return json;
 }

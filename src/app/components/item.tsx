@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../styles/item.module.css";
 
 interface ISellerProps {
@@ -6,5 +7,9 @@ interface ISellerProps {
 }
 
 export default function Item({ title, listName }: ISellerProps) {
-  return <div className={styles.div}>{title}</div>;
+  return (
+    <div className={styles.div}>
+      <Link href={`/list/${listName}`}>{title}</Link>
+    </div>
+  );
 }

@@ -1,10 +1,11 @@
 import Item from "../components/item";
 import styles from "../styles/home.module.css";
+import { API_URL } from "../constants";
 
-const API_KEY = process.env.API_KEY;
+// const API_KEY = process.env.API_KEY;
 
 async function getBestSellers() {
-  const response = await fetch(`${API_KEY}s`);
+  const response = await fetch(`${API_URL}s`);
   const json = await response.json();
   return json;
 }

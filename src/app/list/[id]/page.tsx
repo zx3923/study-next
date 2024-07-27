@@ -1,10 +1,9 @@
 import Book from "@/app/components/book";
 import styles from "../../styles/listPage.module.css";
-
-const API_KEY = process.env.API_KEY;
+import { API_URL } from "@/app/constants";
 
 async function getList(name: any) {
-  const response = await fetch(`${API_KEY}?name=${name}`);
+  const response = await fetch(`${API_URL}?name=${name}`);
   const json = await response.json();
   return json;
 }

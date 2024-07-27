@@ -11,7 +11,6 @@ async function getBestSellers() {
 
 export default async function Home() {
   const sellers = await getBestSellers();
-  console.log(sellers.results);
   return (
     <>
       <h1 className={styles.h1}>The New York Times Best Seller Explorer</h1>

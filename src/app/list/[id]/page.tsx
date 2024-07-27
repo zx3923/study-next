@@ -1,5 +1,5 @@
 import Book from "@/app/components/book";
-import styles from "../../styles/listDetail.module.css";
+import styles from "../../styles/listPage.module.css";
 
 const API_KEY = process.env.API_KEY;
 

@@ -1,0 +1,33 @@
+.bookBox {
+  border: 1px solid black;
+}
+.imgBox {
+  min-width: 300px;
+}
+
+.img {
+  width: 100%;
+  max-height: 470px;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.titleBox span {
+  margin: 5px;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnBox button {
+  padding: 10px 20px;
+}
